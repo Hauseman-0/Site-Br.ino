@@ -1,0 +1,219 @@
+/* Defina variáveis de CSS para cores e fontes */
+:root {
+    --primary-color: #5AB18E;
+    --secondary-color: #D17342;
+    --text-color: #0000003f;
+    --bg-color: #f5f5f5;
+    --font-family: 'Inter', sans-serif;
+}
+
+/* Reseta o CSS padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo */
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Seção de Parceiros */
+.parceiros {
+    background-color: var(--primary-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.parceiros h2 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.logos-parceiros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logos-parceiros img {
+    max-width: 150px;
+    margin: 0 15px;
+    opacity: 1.0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.logos-parceiros img:hover {
+    opacity: 1;
+}
+
+/* Seção Quem Somos */
+.quem-somos {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.quem-somos h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #0E0E0E;
+}
+
+.quem-somos p {
+    margin-top: 10px;
+    font-size: 1.15em;
+    color: rgba(14, 14, 14, 0.7);
+}
+
+/* Estilo para o container do vídeo */
+.video-container {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 1322px;
+    height: auto;
+    aspect-ratio: 1322 / 638;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* texto alinhado com o vídeo */
+.descricao {
+    text-align: justify;
+    margin: 20px auto;
+    max-width: 1322px;
+}
+
+/* Seção de Tutoriais */
+.tutoriais {
+    padding: 60px 0;
+    text-align: center;
+    background-color: white;
+}
+
+/* Banner */
+.gradient-banner {
+    background: linear-gradient(120deg, var(--secondary-color), #184830, #184830, #2D1B49);
+    width: 100%;
+    max-width: 1320px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.imagem-1 {
+    position: relative;
+    width: 220px;
+    max-width: 220px;
+}
+
+.img-fundo,
+.img-sobreposta {
+    width: 100%;
+}
+
+.img-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.img-sobreposta {
+    position: relative;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+}
+
+/* Conteúdo do texto dentro do banner */
+.banner-text {
+    max-width: 45%;
+    flex: 1;
+    text-align: left;
+}
+
+.banner-text h2,
+.banner-text p {
+    color: white;
+    line-height: 24.2px;
+}
+
+.banner-text h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: white;
+    line-height: 38px;
+}
+
+.banner-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.botao-tutorial {
+    padding: 12px 25px;
+    background-color: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 100px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+}
+
+.botao-tutorial::after {
+    content: '\f101';
+    font-family: "Font Awesome 5 Free";
+    margin-left: 8px;
+    font-weight: 900;
+    transition: margin-left 0.3s ease;
+}
+
+.botao-tutorial:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.botao-tutorial:hover::after {
+    margin-left: 15px;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .imagem-1 {
+        max-width: 100%;
+    }
+
+    .banner-text {
+        max-width: 100%;
+    }
+}
